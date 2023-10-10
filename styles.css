@@ -1,0 +1,20 @@
+.two-column-text {
+  column-count: 2; /* Définit le nombre de colonnes */
+  column-gap: 20px; /* Facultatif : définit l'espace entre les colonnes */
+}
+
+.room-container {
+  position: relative;
+}
+
+.chair {
+  position: absolute;
+  
+  top: 00px;
+  left: 400px;
+}
+
+    .align-right {
+      float: right; /* Aligne l'image à droite */
+      margin-left: 10px; /* Ajoute une marge à gauche pour un espace supplémentaire */
+    }
