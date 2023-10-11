@@ -42,10 +42,10 @@
     }
 
     .background-image {
-      background-image: url('assets/img/turb5.png');
-      background-size: cover; /* Ajustez la taille de l'image en fonction de la fenêtre */
+      background-image: url('assets/img/turb6.png');
+      background-size: 80%; /* Ajustez la taille de l'image en fonction de la fenêtre */
       background-repeat: no-repeat; /* Empêche la répétition de l'image en arrière-plan */
-      background-position: right;
+      background-position: -0px -0px;
       /* Autres propriétés de fond (si nécessaire) */
     }
     .background-image2 {
@@ -123,6 +123,7 @@
                     <div class="subheading mb-5">
                         Pau, 64000 - France
                         <a href="mailto:name@email.com">martin.david@inria.fr</a>
+                        <p>CV: <a href="assets/img/CV_Martin_David_academique_092023.pdf"><i class="fa-solid fa-file"></i></a></p>
                     </div>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.researchgate.net/profile/Martin-David-18"><i class="fab fa-researchgate"></i></a>
@@ -286,6 +287,67 @@
                             <p class="full-justify">The DNS produces high-fidelity results with a very thin level of description, deepening the flow comprehension and providing reference data for the lower-fidelity computations. However, these simulations are very costly and can only be performed at the local scale: the DNS of a channel flow at the turbulence level encountered in solar receivers requires up to 4.5 million hours on a supercomputer. The T-LES performed in the studied conditions needs about 20000 hours, namely 200 times less than the DNS. The geometry studied with the T-LES was not more complex than the one studied in DNS but the LES offered the possibility of investigating a large number of operating conditions. A heat transfer correlation has then been developed based on the results of 70 T-LES, enabling heat transfer computation in the entire solar receiver.</p>
                         </div>
                     </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0" id="DNS">Study of the coupling between dynamics and heat transfers using Direct Numerical Simulations </h3>
+                            <div class="subheading mb-3">PhD</div>
+                            <p class="full-justify">Solar receiver flows are very complex since the heating fluid is strongly turbulent and asymmetrically heated at high-temperature levels. To deepen the understanding of these flows, and ultimately improve the receiver performance by increasing the heat transfer and reducing the wall friction, DNS have been performed in different fluid heating configurations.</p>
+                                <div style="text-align: center;">
+                                    <figure>
+                                        <img src="assets/img/Assemblage.png" width="90%" />
+                                        <figcaption><i>Vizualization of the coupling between dynamics and heat transfers at the wall. From <a href="https://hal.science/hal-04002561"> David <i>et al.</i> (2023)</a></i> </figcaption>
+                                    </figure>
+                                </div>  
+                            <p class="full-justify"> The above figure highlights the strong correlation between the wall heat fluxes and the wall frictions. Low heat fluxes and wall frictions are associated with elongated patterns reflecting the turbulent structures in the near-wall region. The ratio between the two quantities shows that, generally, the biggest values of the wall heat flux to wall friction ratio involve patterns elongated in the transverse direction. Further investigations point out a range of normalized sizes of the pattern to promote aiming to increase this ratio. Notice that the patterns are smaller at the cold wall (right pictures) due to the higher turbulence level.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0" id="LES">Development of turbulence models of T-LES in the operating conditions of solar receivers</h3>
+                            <div class="subheading mb-3">Temporal teaching and research assistant</div>
+                            <p class="full-justify">This work deals with Thermal Large-Eddy Simulation (T-LES) of anisothermal turbulent channel flow in the working conditions of solar receivers used in concentrated solar power towers. The flow is characterized by high-temperature levels and strong heat fluxes. The hot and cold friction Reynolds numbers of the simulations are respectively 630 and 970. </p>
+                                <div style="text-align: center;">
+                                    <figure>
+                                        <img src="assets/img/LES_profiles.png" width="90%" />
+                                        <figcaption class="full-justify"><i>Assessment of T-LES on the turbulent heat fluxes of the hot and cold walls. The labels "nomodel" corresponds to the simulation performed without model, "A03-A03" corresponds to the simulation performed with the AMD model for both the eddy-viscosity and the eddy-diffusivity, "A03-As03" corresponds to the simulation performed with the AMD model for the eddy-viscosity and the scalar AMD model for the eddy-diffusivity. The two last labels ("Ac03-Ac03" and "A06+B05-A06+B04 2L") correspond to newly proposed models, respectively an adaptation of the classical AMD closure to compressible flows and a two-layer mixed model.</i></figcaption>
+                                    </figure>
+                                </div>  
+                            <p class="full-justify"> The results stress that the proposed models perform better on the prediction of the streamwise turbulent heat flux. Specifically, the two-layer mixed model is in good agreement with DNS results. The influence of the mesh variations on the proposed two-layer mixed model is displayed below. The AAA, BAB, and CAC meshes consist of 3.7, 2.3, and 1.4 million cells, respectively. The results point out the weak impact of the mesh on the performance of the two-layer mixed model.</p>
+                            <div style="text-align: center;">
+                            <figure>
+                                <img src="assets/img/LES_Tplus.png" width="90%" />
+                                <figcaption><i>Influence of the mesh on the prediction of the normalized temperature profile, assement of the two layer mixed model.</i></figcaption>
+                            </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0" id="dev">Development of a heat transfer correlation for gas-pressurized solar receivers</h3>
+                            <div class="subheading mb-3">PhD</div>
+                            <p class="full-justify">Heat transfer correlations are widely utilized in industry because of their simplicity of use. However, their applicability domain is often very restrictive. We developed a heat transfer correlation dedicated to the operating conditions of solar receivers. The development of this correlation relied on the execution of numerous T-LES across a wide range of configurations, encompassing scenarios with both symmetric and asymmetric fluid heating. As shown in the following figure, the proposed correlation significantly improves the heat transfer prediction when compared to existing correlations and provides an estimate of less than 10% error in all studied configurations.</p>
+                                <div style="text-align: center;">
+                                    <figure>
+                                        <img src="assets/img/Nu_Nu_multiplot-eps-converted-to-1.png" width="80%"/>
+                                        <figcaption><i>Assessment of three correlations of the literature and the proposed one in the operating conditions of solar receivers. From <a href="https://hal.science/hal-03404603"> David <i>et al.</i> (2021)</a></i> </figcaption>
+                                    </figure>
+                                </div>                               
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0" id="sens">Error propagation of flow parameters on wall heat transfers in solar receivers</h3>
+                            <div class="subheading mb-3">PhD</div>
+                            <p class="full-justify">Uncertainties may skew the understanding of the results of experiments or numerical simulations. The impact of the flow parameters uncertainties of measurement on wall heat flux is investigated in anisothermal turbulent channel flow. The proposed heat transfer correlation dedicated to gas-pressurized solar receivers of concentrated solar tower power is used. The Guide to the expression of Uncertainty in Measurement (GUM) is applied and provides an analytical expression of the uncertainty propagation. Assuming the quasi-normality and quasi-linearity of the studied function, this method provides approximate results. The results obtained following the methodology described in the GUM are then compared to the direct computation of the wall heat flux with altered temperatures. </p>
+                                <div style="text-align: center;">
+                                    <figure>
+                                        <img src="assets/img/Tw_phiISO_direct_GUM_OK-1.png" width="80%"/>
+                                        <figcaption><i>Errors in the wall flux depending on the bulk-to-wall temperature ratio and the error of the measurements of the wall temperatures in the case of symmetric heating conditions. The left graph shows the reference results, and the right graph exposes the estimation produced by the GUM. The lines indicate the isovalues of error 2%, 4%, 8%, 12%, 16%, 20%, 30%, 40%, 60%, 80%, and 100%. From <a href="https://univ-perp.hal.science/hal-03394514"> David <i>et al.</i> (2021)</a></i> </figcaption>
+                                    </figure>
+                                </div>   
+                            <p class="full-justify">The figure shows that the wall heat flux is strongly impacted by the wall temperature error of measurement. An under-estimation of the wall temperature leads to slightly higher uncertainty on the wall heat flux than an overestimation. The model provides an accurate prediction of the error on the entire validity domain of the correlation.</p>
+                        </div>
+                    </div>                    
                 </div>
             </section>
             <!-- Supervision-->
