@@ -293,7 +293,7 @@
                             </ul>                   
                             <h3 class="mb-0" id="DHC">Conjugate heat transfer in differentially heated cavity</h3>
                             <div class="subheading mb-3">Assistant Prof.</div>
-                            <div><p class="full-justify">Traditional Neumann or Dirichlet  boundary conditions often fail to accurately capture real physical phenomena. Conjugate Heat Transfer (CHT), however, provides a more realistic approach by incorporating interactions between solid and fluid domains. Modeling these interactions is crucial for designing robust and efficient industrial systems, as thermal fluctuations in fluid flows induce temperature variations in solid walls, leading to cyclic thermal stresses that can cause fatigue-induced cracking. Advances in computational power have enabled increasingly complex multiphysics simulations in Computational Fluid Dynamics (CFD). The Reynolds-Averaged Navier-Stokes (RANS) approach is widely used in industry due to its low computational cost, but it fails to provide reliable heat transfer predictions in the presence of CHT. To improve the modeling of complex systems with realistic thermal boundary conditions, high-fidelity datasets are needed.</p>
+                            <div><p class="full-justify">Traditional Neumann or Dirichlet  boundary conditions often fail to accurately capture real physical phenomena. Conjugate Heat Transfer (CHT), however, provides a more realistic approach by incorporating interactions between solid and fluid domains. Modeling these interactions is crucial for designing robust and efficient industrial systems, as thermal fluctuations in fluid flows induce temperature variations in solid walls, leading to cyclic thermal stresses that can cause fatigue-induced cracking. Advances in computational power have enabled increasingly complex multiphysics simulations in Computational Fluid Dynamics (CFD). The Reynolds-Averaged Navier-Stokes (RANS) approach is widely used in industry due to its low computational cost, but it fails to provide reliable heat transfer predictions in the presence of CHT. To improve the modeling of complex systems with realistic thermal boundary conditions, high-fidelity datasets are needed. The work presented focuses on quasi-DNS simulations, performed with the spectral solver Tchebycube, of a differentially heated cavity at $Ra=2\times10^9$, with an aspect ratio of 1:4. Conjugate heat transfer effects are considered on the upper and lower cavity walls. The incompressible Navier-Stokes and energy equations are solved in the fluid region, with the Boussinesq approximation assuming constant fluid density except for buoyancy-induced variations. A perfect thermal contact assumption ensures continuity of temperature and heat flux at the fluid-solid interface.</p>
                                 <div style="text-align: center;">
                                     <figure>
                                         <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/ratio_eps_theta_z_310325.png" width="70%" alt="..." />
@@ -352,7 +352,7 @@
                             <p class="full-justify">Solar receiver flows are very complex since the heating fluid is strongly turbulent and asymmetrically heated at high-temperature levels. To deepen the understanding of these flows, and ultimately improve the receiver performance by increasing the heat transfer and reducing the wall friction, DNS have been performed in different fluid heating configurations.</p>
                                 <div style="text-align: center;">
                                     <figure>
-                                        <img src="assets/img/Assemblage.png" width="90%" />
+                                        <img src="assets/img/Assemblage.png" width="70%" />
                                         <figcaption><i>Vizualization of the coupling between dynamics and heat transfers at the wall. From <a href="https://hal.science/hal-04002561"> David <i>et al.</i> (2023)</a></i> </figcaption>
                                     </figure>
                                 </div>  
@@ -368,14 +368,14 @@
                             <p class="full-justify">This work deals with Thermal Large-Eddy Simulation (T-LES) of anisothermal turbulent channel flow in the working conditions of solar receivers used in concentrated solar power towers. The flow is characterized by high-temperature levels and strong heat fluxes. The hot and cold friction Reynolds numbers of the simulations are respectively 630 and 970. </p>
                                 <div style="text-align: center;">
                                     <figure>
-                                        <img src="assets/img/LES_profiles.png" width="90%" />
+                                        <img src="assets/img/LES_profiles.png" width="70%" />
                                         <figcaption class="full-justify"><i>Assessment of T-LES on the turbulent heat fluxes of the hot and cold walls. The labels "nomodel" corresponds to the simulation performed without model, "A03-A03" corresponds to the simulation performed with the AMD model for both the eddy-viscosity and the eddy-diffusivity, "A03-As03" corresponds to the simulation performed with the AMD model for the eddy-viscosity and the scalar AMD model for the eddy-diffusivity. The two last labels ("Ac03-Ac03" and "A06+B05-A06+B04 2L") correspond to newly proposed models, respectively an adaptation of the classical AMD closure to compressible flows and a two-layer mixed model.</i></figcaption>
                                     </figure>
                                 </div>  
                             <p class="full-justify"> The results stress that the proposed models perform better on the prediction of the streamwise turbulent heat flux. Specifically, the two-layer mixed model is in good agreement with DNS results. The influence of the mesh variations on the proposed two-layer mixed model is displayed below. The AAA, BAB, and CAC meshes consist of 3.7, 2.3, and 1.4 million cells, respectively. The results point out the weak impact of the mesh on the performance of the two-layer mixed model.</p>
                             <div style="text-align: center;">
                             <figure>
-                                <img src="assets/img/LES_Tplus.png" width="90%" />
+                                <img src="assets/img/LES_Tplus.png" width="70%" />
                                 <figcaption><i>Influence of the mesh on the prediction of the normalized temperature profile, assement of the two layer mixed model.</i></figcaption>
                             </figure>
                             </div>
@@ -451,7 +451,7 @@
                     </ol> 
                     <div class="subheading mb-3">International conferences</div>
                     <ol class="full-justify">
-                        <li>M. Dreina, <b>M. David</b>b>, and S. Abide, <a>Discontinuous behavior of the thermal dissipation in a differentially heated cavity with conjugate heat transfer</a> presented at the <i>Nonsmooth Problems with Applications in Mechanics Seminar</i>, Olomouc, Tcheque Republic, May 2025.</li>
+                        <li>M. Dreina, <b>M. David</b>, and S. Abide, <a>Discontinuous behavior of the thermal dissipation in a differentially heated cavity with conjugate heat transfer</a> presented at the <i>Nonsmooth Problems with Applications in Mechanics Seminar</i>, Olomouc, Tcheque Republic, May 2025.</li>
                         <li>M. Dreina, <b>M. David</b>, and S. Abide, <a>High-Resolution Simulation of a Differentially Heated Cavity Flow with Conjugate Heat Transfer at $Ra=2\times10^9$</a> presented at the <i>French-Polish Seminar</i>, Czestochowa, Poland, May 2025.</li>
                         <li><b>M. David</b>, M. Mehta, and R. Manceau, <a href="https://hal.science/hal-04210071">Towards self-adaptivity in hybrid RANS/LES based on physical criteria</a> presented at the <i>10th international symposium on Turbulence, Heat and Mass Transfer</i>, Rome, Italy, Sep. 2023.</li>
                         <li> A.Toutant, <b>M. David</b>, Y. Zatout, F. Bataille, L. Mathelin, O. Semeraro, <a href="https://hal.science/hal-04240801">Thermal large eddy simulations for high temperature solar receivers</a> presented at the <i>17th International Heat Transfer Conference</i>, Cape Town, South Africa, Aug. 2023.</li>
