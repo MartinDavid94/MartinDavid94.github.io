@@ -261,186 +261,194 @@
             </section>
             <hr class="m-0" />
             <!-- Education-->
-            <section class="resume-section" id="Research">
-                <div class="resume-section-content">
-                    <div class="background-image3">
-                    <h2 class="mb-5">Research</h2>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <p class="full-justify">My work is generally devoted to the <b>modeling of turbulent flows</b>, the simulation and the analysis of <b>turbulence/heat transfer couplings</b>, the modeling of <b>sediment transport</b> using Euler-Euler approaches, and development of <b>self-adaptive approaches</b>. I am also working on <b>conjugate heat transfers</b> in turbulent natural convection. Some of my research works are presented below:</p>
-                           <ul>
-                           <li>
-                                <a href="#diph"> Two-phase RANS modeling of sedimentation processes</a>
-                            </li>   
-                            <li>
-                                <a href="#DHC"> Conjugate heat transfer in differentially heated cavity </a>
-                            </li>
-                            <li>
-                                <a href="#self"> Self-adaptive strategy </a>
-                            </li>
-                            <li>
-                                <a href="#mult"> Multi-fidelity approach for solar receivers flows</a>
-                            </li>        
-                            <li>
-                                <a href="#DNS"> Study of the coupling between dynamics and heat transfers using Direct Numerical Simulations</a>
-                            </li> 
-                            <li>
-                                <a href="#LES"> Development of turbulence models of T-LES in the operating conditions of solar receivers</a>
-                            </li> 
-                            <li>
-                                <a href="#dev"> Development of a heat transfer correlation for gas-pressurized solar receivers</a>
-                            </li> 
-                            <li>
-                                <a href="#sens"> Error propagation of flow parameters on wall heat transfers in solar receivers</a>
-                            </li>                                 
-                            </ul>   
-                            <h3 class="mb-0" id="diph">Two-phase RANS modeling of sedimentation processes</h3>
-                            <div class="subheading mb-3">Associate Prof.</div>
-                            <div><p class="full-justify">This research aims to understand the interplay between <b>sedimentary processes</b> and marine currents influenced by polar ice melt. The goal is to provide data that can refine climate prediction models. Our approach uses an <b>upscaling methodology</b> to inform increasingly coarse models: starting from a <b>two-phase Euler-Euler RANS model</b>, we integrate a <b>morphodynamic solver</b> with advection-convection equations for sediment concentration, ultimately developing a <b>reduced-order model</b>. The objective is to reconstruct ancient marine currents based on sediment deposits. This interdisciplinary project is conducted in collaboration with sedimentologists, oceanographers, and geologists from CEFREM (Kelly Fauquembergue, Associate Professor, and Lies Loncke, Professor). Since September 2026, we have been co-supervising Jules Fanti’s PhD thesis on this topic.</p>
-                                <div style="text-align: center;">
-                                    <figure>
-                                        <video controls width="70%">
-                                            <source src="assets/img/diph3.mp4" type="video/mp4">
-                                            <source src="assets/img/diph3.webm" type="video/webm">
-                                            Votre navigateur ne supporte pas la lecture de vidéo.
-                                        </video>
-                                        <figcaption>
-                                            <i>
-                                                Top: surface LIC of fluid velocity coloured by sediment concentration and bottom:
-                                                surface LIC of solid velocity coloured by granular temperature, i.e. grain agitation.
-                                            </i>
-                                         </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                            <h3 class="mb-0" id="DHC">Conjugate heat transfer in differentially heated cavity</h3>
-                            <div class="subheading mb-3">Associate Prof.</div>
-                            <div><p class="full-justify">Traditional Neumann or Dirichlet  boundary conditions often fail to accurately capture real physical phenomena. Conjugate Heat Transfer (CHT), however, provides a more realistic approach by incorporating interactions between solid and fluid domains. Modeling these interactions is crucial for designing robust and efficient industrial systems, as thermal fluctuations in fluid flows induce temperature variations in solid walls, leading to cyclic thermal stresses that can cause fatigue-induced cracking. Advances in computational power have enabled increasingly complex multiphysics simulations in Computational Fluid Dynamics (CFD). The Reynolds-Averaged Navier-Stokes (RANS) approach is widely used in industry due to its low computational cost, but it fails to provide reliable heat transfer predictions in the presence of CHT. To improve the modeling of complex systems with realistic thermal boundary conditions, high-fidelity datasets are needed. The work presented focuses on quasi-DNS simulations, performed with the spectral solver Tchebycube, of a differentially heated cavity at $Ra=2\times10^9$, with an aspect ratio of 1:4. Conjugate heat transfer effects are considered on the upper and lower cavity walls. The incompressible Navier-Stokes and energy equations are solved in the fluid region, with the Boussinesq approximation assuming constant fluid density except for buoyancy-induced variations. A perfect thermal contact assumption ensures continuity of temperature and heat flux at the fluid-solid interface.</p>
-                                <div style="text-align: center;">
-                                    <figure>
-                                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/ratio_eps_theta_z_310325.png" width="70%" alt="..." />
-                                        <figcaption><i>Thermal dissipation at the fluid/solid interface.</i></figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div><p class="full-justify">Thermal dissipation exhibits a discontinuity at the fluid–solid interface, posing a challenge for turbulence modeling. The magnitude of this discontinuity depends on the ratio of thermal conductivities between the two media.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <br>                            
-                            <h3 class="mb-0" id="self">Self-adaptive strategy</h3>
-                            <div class="subheading mb-3">Postdoctoral student</div>
-                            <div><p class="full-justify">In continuous hybrid RANS/LES approaches, the location of the switching between the RANS and LES modes is based on the mesh and has a significant impact on the results. The development of a <b>self-adaptive strategy to mitigate the influence of the user</b>'s meshing choices on the results is then of primary interest. In this work, a physical criterion is used to determine where to switch between RANS and LES and provides the cell sizes in the LES region. The proposed method is applied to the backward-facing step with the Hybrid Temporal LES (HTLES) model. Notice that the approach is non-intrusive and applicable to any other hybrid approach. The algorithm of the method is illustrated below.</p>
-                                <div style="text-align: center;">
-                                    <figure>
-                                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/algo.png" width="70%" alt="..." />
-                                        <figcaption><i>Algorithm used in the self-adaptive approach.</i></figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div><p class="full-justify">The proposed method rapidly converges and, when associated with the HTLES model, significantly improves the RANS results. The LES region, and thus the generation of resolved structures, is automatically restricted to the region of interest as can be seen in the following animation:</p>
-                            </div>
-                            <div style="text-align: center;">
-                                <video controls width="70%">
-                                    <source src="assets/img/HTLES_BFS.mp4" type="video/mp4" >
-                                    <source src="assets/img/HTLES_BFS.webm" type="video/webm">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <br>                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0" id="mult">Multi-fidelity approach for solar receivers flows</h3>
-                            <div class="subheading mb-3">PhD</div>
-                            <p class="full-justify">The flows encountered in receivers of CSP involve characteristic size and time of different orders of magnitudes and <b>strong interactions between the dynamics and the heat transfer</b>. For these reasons, approaches at different levels are needed. In this work, a <b>multi-fidelity approach</b> has been conducted to produce a  thorough analysis of these challenging flows.</p>
-                                <div style="text-align: center;">
-                                    <figure>
-                                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/multi_fidelity_CSP.png" width="70%" alt="..." />
-                                        <figcaption><i>Investigation of solar receiver flows with multi-fidelity approach.</i></figcaption>
-                                    </figure>
-                                </div>   
-                            <p class="full-justify">The DNS produces high-fidelity results with a very thin level of description, deepening the flow comprehension and providing reference data for the lower-fidelity computations. However, these simulations are very costly and can only be performed at the local scale: the DNS of a channel flow at the turbulence level encountered in solar receivers requires up to 4.5 million hours on a supercomputer. The T-LES performed in the studied conditions needs about 20000 hours, namely 200 times less than the DNS. The geometry studied with the T-LES was not more complex than the one studied in DNS but the LES offered the possibility of investigating a large number of operating conditions. A heat transfer correlation has then been developed based on the results of 70 T-LES, enabling heat transfer computation in the entire solar receiver.</p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0" id="DNS">Study of the coupling between dynamics and heat transfers using Direct Numerical Simulations </h3>
-                            <div class="subheading mb-3">PhD</div>
-                            <p class="full-justify">Solar receiver flows are very complex since the heating fluid is strongly turbulent and asymmetrically heated at high-temperature levels. To deepen the understanding of these flows, and ultimately improve the receiver performance by increasing the heat transfer and reducing the wall friction, DNS have been performed in different fluid heating configurations.</p>
-                                <div style="text-align: center;">
-                                    <figure>
-                                        <img src="assets/img/Assemblage.png" width="70%" />
-                                        <figcaption><i>Vizualization of the coupling between dynamics and heat transfers at the wall. From <a href="https://hal.science/hal-04002561"> David <i>et al.</i> (2023)</a></i> </figcaption>
-                                    </figure>
-                                </div>  
-                            <p class="full-justify"> The above figure highlights the strong correlation between the wall heat fluxes and the wall frictions. Low heat fluxes and wall frictions are associated with elongated patterns reflecting the turbulent structures in the near-wall region. The ratio between the two quantities shows that, generally, the biggest values of the wall heat flux to wall friction ratio involve patterns elongated in the transverse direction. Further investigations point out a range of normalized sizes of the pattern to promote aiming to increase this ratio. Notice that the patterns are smaller at the cold wall (right pictures) due to the higher turbulence level.</p>
-                        </div>
-                    </div>
-                    <br>
-                    <br>                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0" id="LES">Development of turbulence models of T-LES in the operating conditions of solar receivers</h3>
-                            <div class="subheading mb-3">Temporal teaching and research assistant</div>
-                            <p class="full-justify">This work deals with Thermal Large-Eddy Simulation (T-LES) of anisothermal turbulent channel flow in the working conditions of solar receivers used in concentrated solar power towers. The flow is characterized by high-temperature levels and strong heat fluxes. The hot and cold friction Reynolds numbers of the simulations are respectively 630 and 970. </p>
-                                <div style="text-align: center;">
-                                    <figure>
-                                        <img src="assets/img/LES_profiles.png" width="70%" />
-                                        <figcaption class="full-justify"><i>Assessment of T-LES on the turbulent heat fluxes of the hot and cold walls. The labels "nomodel" corresponds to the simulation performed without model, "A03-A03" corresponds to the simulation performed with the AMD model for both the eddy-viscosity and the eddy-diffusivity, "A03-As03" corresponds to the simulation performed with the AMD model for the eddy-viscosity and the scalar AMD model for the eddy-diffusivity. The two last labels ("Ac03-Ac03" and "A06+B05-A06+B04 2L") correspond to newly proposed models, respectively an adaptation of the classical AMD closure to compressible flows and a two-layer mixed model.</i></figcaption>
-                                    </figure>
-                                </div>  
-                            <p class="full-justify"> The results stress that the proposed models perform better on the prediction of the streamwise turbulent heat flux. Specifically, the two-layer mixed model is in good agreement with DNS results. The influence of the mesh variations on the proposed two-layer mixed model is displayed below. The AAA, BAB, and CAC meshes consist of 3.7, 2.3, and 1.4 million cells, respectively. The results point out the weak impact of the mesh on the performance of the two-layer mixed model.</p>
-                            <div style="text-align: center;">
-                            <figure>
-                                <img src="assets/img/LES_Tplus.png" width="70%" />
-                                <figcaption><i>Influence of the mesh on the prediction of the normalized temperature profile, assement of the two layer mixed model.</i></figcaption>
-                            </figure>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <br>                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0" id="dev">Development of a heat transfer correlation for gas-pressurized solar receivers</h3>
-                            <div class="subheading mb-3">PhD</div>
-                            <p class="full-justify">Heat transfer correlations are widely utilized in industry because of their simplicity of use. However, their applicability domain is often very restrictive. We developed a heat transfer correlation dedicated to the operating conditions of solar receivers. The development of this correlation relied on the execution of numerous T-LES across a wide range of configurations, encompassing scenarios with both symmetric and asymmetric fluid heating. As shown in the following figure, the proposed correlation significantly improves the heat transfer prediction when compared to existing correlations (particularly in asymetric heating conditions) and provides an estimate of less than 10% error in all studied configurations.</p>
-                                <div style="text-align: center;">
-                                    <figure>
-                                        <img src="assets/img/Nu_Nu_multiplot-eps-converted-to-1.png" width="80%"/>
-                                        <figcaption><i>Assessment of three correlations of the literature and the proposed one in the operating conditions of solar receivers. "PC" stands for Proposed Correlation. From <a href="https://hal.science/hal-03404603"> David <i>et al.</i> (2021)</a></i> </figcaption>
-                                    </figure>
-                                </div>                               
-                        </div>
-                    </div>
-                    <br>
-                    <br>                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0" id="sens">Error propagation of flow parameters on wall heat transfers in solar receivers</h3>
-                            <div class="subheading mb-3">PhD</div>
-                            <p class="full-justify">Uncertainties may skew the understanding of the results of experiments or numerical simulations. The impact of the flow parameters uncertainties of measurement on wall heat flux is investigated in anisothermal turbulent channel flow. The proposed heat transfer correlation dedicated to gas-pressurized solar receivers of concentrated solar tower power is used. The Guide to the expression of Uncertainty in Measurement (GUM) is applied and provides an analytical expression of the uncertainty propagation. Assuming the quasi-normality and quasi-linearity of the studied function, this method provides approximate results. The results obtained following the methodology described in the GUM are then compared to the direct computation of the wall heat flux with altered temperatures. </p>
-                                <div style="text-align: center;">
-                                    <figure>
-                                        <img src="assets/img/Tw_phiISO_direct_GUM_OK-1.png" width="80%"/>
-                                        <figcaption class="full-justify"><i>Errors in the wall flux depending on the bulk-to-wall temperature ratio and the error of the measurements of the wall temperatures in the case of symmetric heating conditions. The left graph shows the reference results, and the right graph exposes the estimation produced by the GUM. The lines indicate the isovalues of error 2%, 4%, 8%, 12%, 16%, 20%, 30%, 40%, 60%, 80%, and 100%. From <a href="https://univ-perp.hal.science/hal-03394514"> David <i>et al.</i> (2021)</a></i> </figcaption>
-                                    </figure>
-                                </div>   
-                            <p class="full-justify">The figure shows that the wall heat flux is strongly impacted by the wall temperature error of measurement. An under-estimation of the wall temperature leads to slightly higher uncertainty on the wall heat flux than an overestimation. The model provides an accurate prediction of the error on the entire validity domain of the correlation.</p>
-                        </div>
-                    </div>                    
+<section class="resume-section" id="Research">
+    <div class="resume-section-content">
+        
+        <!-- En-tête de la section -->
+        <div class="background-image3">
+            <h2 class="mb-5">Research</h2>
+        </div>
+
+        <!-- Introduction et Index des travaux -->
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <p class="full-justify">My work is generally devoted to the <b>modeling of turbulent flows</b>, the simulation and the analysis of <b>turbulence/heat transfer couplings</b>, the modeling of <b>sediment transport</b> using Euler-Euler approaches, and development of <b>self-adaptive approaches</b>. I am also working on <b>conjugate heat transfers</b> in turbulent natural convection. Some of my research works are presented below:</p>
+                <ul>
+                    <li><a href="#diph">Two-phase RANS modeling of sedimentation processes</a></li>
+                    <li><a href="#DHC">Conjugate heat transfer in differentially heated cavity</a></li>
+                    <li><a href="#self">Self-adaptive strategy</a></li>
+                    <li><a href="#mult">Multi-fidelity approach for solar receivers flows</a></li>
+                    <li><a href="#DNS">Study of the coupling between dynamics and heat transfers using Direct Numerical Simulations</a></li>
+                    <li><a href="#LES">Development of turbulence models of T-LES in the operating conditions of solar receivers</a></li>
+                    <li><a href="#dev">Development of a heat transfer correlation for gas-pressurized solar receivers</a></li>
+                    <li><a href="#sens">Error propagation of flow parameters on wall heat transfers in solar receivers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projet 1: Two-phase RANS modeling -->
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0" id="diph">Two-phase RANS modeling of sedimentation processes</h3>
+                <div class="subheading mb-3">Associate Prof.</div>
+                <p class="full-justify">This research aims to understand the interplay between <b>sedimentary processes</b> and marine currents influenced by polar ice melt. The goal is to provide data that can refine climate prediction models. Our approach uses an <b>upscaling methodology</b> to inform increasingly coarse models: starting from a <b>two-phase Euler-Euler RANS model</b>, we integrate a <b>morphodynamic solver</b> with advection-convection equations for sediment concentration, ultimately developing a <b>reduced-order model</b>. The objective is to reconstruct ancient marine currents based on sediment deposits. This interdisciplinary project is conducted in collaboration with sedimentologists, oceanographers, and geologists from CEFREM (Kelly Fauquembergue, Associate Professor, and Lies Loncke, Professor). Since September 2026, we have been co-supervising Jules Fanti’s PhD thesis on this topic.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <video controls width="70%">
+                            <source src="assets/img/diph3.mp4" type="video/mp4">
+                            <source src="assets/img/diph3.webm" type="video/webm">
+                            Votre navigateur ne supporte pas la lecture de vidéo.
+                        </video>
+                        <figcaption>
+                            <i>Top: surface LIC of fluid velocity coloured by sediment concentration and bottom: surface LIC of solid velocity coloured by granular temperature, i.e. grain agitation.</i>
+                        </figcaption>
+                    </figure>
                 </div>
-            </section>
+            </div>
+        </div>
+
+        <!-- Projet 2: Conjugate heat transfer -->
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0" id="DHC">Conjugate heat transfer in differentially heated cavity</h3>
+                <div class="subheading mb-3">Associate Prof.</div>
+                <p class="full-justify">Traditional Neumann or Dirichlet boundary conditions often fail to accurately capture real physical phenomena. Conjugate Heat Transfer (CHT), however, provides a more realistic approach by incorporating interactions between solid and fluid domains. Modeling these interactions is crucial for designing robust and efficient industrial systems, as thermal fluctuations in fluid flows induce temperature variations in solid walls, leading to cyclic thermal stresses that can cause fatigue-induced cracking. Advances in computational power have enabled increasingly complex multiphysics simulations in Computational Fluid Dynamics (CFD). The Reynolds-Averaged Navier-Stokes (RANS) approach is widely used in industry due to its low computational cost, but it fails to provide reliable heat transfer predictions in the presence of CHT. To improve the modeling of complex systems with realistic thermal boundary conditions, high-fidelity datasets are needed. The work presented focuses on quasi-DNS simulations, performed with the spectral solver Tchebycube, of a differentially heated cavity at $Ra=2\times10^9$, with an aspect ratio of 1:4. Conjugate heat transfer effects are considered on the upper and lower cavity walls. The incompressible Navier-Stokes and energy equations are solved in the fluid region, with the Boussinesq approximation assuming constant fluid density except for buoyancy-induced variations. A perfect thermal contact assumption ensures continuity of temperature and heat flux at the fluid-solid interface.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/ratio_eps_theta_z_310325.png" width="70%" alt="Thermal dissipation graph" />
+                        <figcaption><i>Thermal dissipation at the fluid/solid interface.</i></figcaption>
+                    </figure>
+                </div>
+                
+                <p class="full-justify">Thermal dissipation exhibits a discontinuity at the fluid–solid interface, posing a challenge for turbulence modeling. The magnitude of this discontinuity depends on the ratio of thermal conductivities between the two media.</p>
+            </div>
+        </div>
+
+        <!-- Projet 3: Self-adaptive strategy -->
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0" id="self">Self-adaptive strategy</h3>
+                <div class="subheading mb-3">Postdoctoral student</div>
+                <p class="full-justify">In continuous hybrid RANS/LES approaches, the location of the switching between the RANS and LES modes is based on the mesh and has a significant impact on the results. The development of a <b>self-adaptive strategy to mitigate the influence of the user</b>'s meshing choices on the results is then of primary interest. In this work, a physical criterion is used to determine where to switch between RANS and LES and provides the cell sizes in the LES region. The proposed method is applied to the backward-facing step with the Hybrid Temporal LES (HTLES) model. Notice that the approach is non-intrusive and applicable to any other hybrid approach. The algorithm of the method is illustrated below.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/algo.png" width="70%" alt="Self-adaptive algorithm" />
+                        <figcaption><i>Algorithm used in the self-adaptive approach.</i></figcaption>
+                    </figure>
+                </div>
+                
+                <p class="full-justify">The proposed method rapidly converges and, when associated with the HTLES model, significantly improves the RANS results. The LES region, and thus the generation of resolved structures, is automatically restricted to the region of interest as can be seen in the following animation:</p>
+                
+                <div style="text-align: center;">
+                    <video controls width="70%">
+                        <source src="assets/img/HTLES_BFS.mp4" type="video/mp4">
+                        <source src="assets/img/HTLES_BFS.webm" type="video/webm">
+                        Votre navigateur ne supporte pas la lecture de vidéo.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 4: Multi-fidelity approach -->
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0" id="mult">Multi-fidelity approach for solar receivers flows</h3>
+                <div class="subheading mb-3">PhD</div>
+                <p class="full-justify">The flows encountered in receivers of CSP involve characteristic size and time of different orders of magnitudes and <b>strong interactions between the dynamics and the heat transfer</b>. For these reasons, approaches at different levels are needed. In this work, a <b>multi-fidelity approach</b> has been conducted to produce a thorough analysis of these challenging flows.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/multi_fidelity_CSP.png" width="70%" alt="Multi-fidelity approach chart" />
+                        <figcaption><i>Investigation of solar receiver flows with multi-fidelity approach.</i></figcaption>
+                    </figure>
+                </div>   
+                
+                <p class="full-justify">The DNS produces high-fidelity results with a very thin level of description, deepening the flow comprehension and providing reference data for the lower-fidelity computations. However, these simulations are very costly and can only be performed at the local scale: the DNS of a channel flow at the turbulence level encountered in solar receivers requires up to 4.5 million hours on a supercomputer. The T-LES performed in the studied conditions needs about 20000 hours, namely 200 times less than the DNS. The geometry studied with the T-LES was not more complex than the one studied in DNS but the LES offered the possibility of investigating a large number of operating conditions. A heat transfer correlation has then been developed based on the results of 70 T-LES, enabling heat transfer computation in the entire solar receiver.</p>
+            </div>
+        </div>
+
+        <!-- Projet 5: Study of the coupling -->
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0" id="DNS">Study of the coupling between dynamics and heat transfers using Direct Numerical Simulations</h3>
+                <div class="subheading mb-3">PhD</div>
+                <p class="full-justify">Solar receiver flows are very complex since the heating fluid is strongly turbulent and asymmetrically heated at high-temperature levels. To deepen the understanding of these flows, and ultimately improve the receiver performance by increasing the heat transfer and reducing the wall friction, DNS have been performed in different fluid heating configurations.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/Assemblage.png" width="70%" alt="Coupling visualization" />
+                        <figcaption><i>Visualization of the coupling between dynamics and heat transfers at the wall. From <a href="https://hal.science/hal-04002561"> David <i>et al.</i> (2023)</a></i></figcaption>
+                    </figure>
+                </div>  
+                
+                <p class="full-justify">The above figure highlights the strong correlation between the wall heat fluxes and the wall frictions. Low heat fluxes and wall frictions are associated with elongated patterns reflecting the turbulent structures in the near-wall region. The ratio between the two quantities shows that, generally, the biggest values of the wall heat flux to wall friction ratio involve patterns elongated in the transverse direction. Further investigations point out a range of normalized sizes of the pattern to promote aiming to increase this ratio. Notice that the patterns are smaller at the cold wall (right pictures) due to the higher turbulence level.</p>
+            </div>
+        </div>
+
+        <!-- Projet 6: Development of turbulence models -->
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0" id="LES">Development of turbulence models of T-LES in the operating conditions of solar receivers</h3>
+                <div class="subheading mb-3">Temporal teaching and research assistant</div>
+                <p class="full-justify">This work deals with Thermal Large-Eddy Simulation (T-LES) of anisothermal turbulent channel flow in the working conditions of solar receivers used in concentrated solar power towers. The flow is characterized by high-temperature levels and strong heat fluxes. The hot and cold friction Reynolds numbers of the simulations are respectively 630 and 970.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/LES_profiles.png" width="70%" alt="T-LES Profiles" />
+                        <figcaption class="full-justify"><i>Assessment of T-LES on the turbulent heat fluxes of the hot and cold walls. The labels "nomodel" corresponds to the simulation performed without model, "A03-A03" corresponds to the simulation performed with the AMD model for both the eddy-viscosity and the eddy-diffusivity, "A03-As03" corresponds to the simulation performed with the AMD model for the eddy-viscosity and the scalar AMD model for the eddy-diffusivity. The two last labels ("Ac03-Ac03" and "A06+B05-A06+B04 2L") correspond to newly proposed models, respectively an adaptation of the classical AMD closure to compressible flows and a two-layer mixed model.</i></figcaption>
+                    </figure>
+                </div>  
+                
+                <p class="full-justify">The results stress that the proposed models perform better on the prediction of the streamwise turbulent heat flux. Specifically, the two-layer mixed model is in good agreement with DNS results. The influence of the mesh variations on the proposed two-layer mixed model is displayed below. The AAA, BAB, and CAC meshes consist of 3.7, 2.3, and 1.4 million cells, respectively. The results point out the weak impact of the mesh on the performance of the two-layer mixed model.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/LES_Tplus.png" width="70%" alt="Mesh influence graph" />
+                        <figcaption><i>Influence of the mesh on the prediction of the normalized temperature profile, assessment of the two layer mixed model.</i></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projet 7: Development of a heat transfer correlation -->
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="flex-grow-1">
+                <h3 class="mb-0" id="dev">Development of a heat transfer correlation for gas-pressurized solar receivers</h3>
+                <div class="subheading mb-3">PhD</div>
+                <p class="full-justify">Heat transfer correlations are widely utilized in industry because of their simplicity of use. However, their applicability domain is often very restrictive. We developed a heat transfer correlation dedicated to the operating conditions of solar receivers. The development of this correlation relied on the execution of numerous T-LES across a wide range of configurations, encompassing scenarios with both symmetric and asymmetric fluid heating. As shown in the following figure, the proposed correlation significantly improves the heat transfer prediction when compared to existing correlations (particularly in asymmetric heating conditions) and provides an estimate of less than 10% error in all studied configurations.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/Nu_Nu_multiplot-eps-converted-to-1.png" width="80%" alt="Correlation assessment" />
+                        <figcaption><i>Assessment of three correlations of the literature and the proposed one in the operating conditions of solar receivers. "PC" stands for Proposed Correlation. From <a href="https://hal.science/hal-03404603"> David <i>et al.</i> (2021)</a></i></figcaption>
+                    </figure>
+                </div>                               
+            </div>
+        </div>
+
+        <!-- Projet 8: Error propagation of flow parameters -->
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="flex-grow-1">
+                <h3 class="mb-0" id="sens">Error propagation of flow parameters on wall heat transfers in solar receivers</h3>
+                <div class="subheading mb-3">PhD</div>
+                <p class="full-justify">Uncertainties may skew the understanding of the results of experiments or numerical simulations. The impact of the flow parameters uncertainties of measurement on wall heat flux is investigated in anisothermal turbulent channel flow. The proposed heat transfer correlation dedicated to gas-pressurized solar receivers of concentrated solar tower power is used. The Guide to the expression of Uncertainty in Measurement (GUM) is applied and provides an analytical expression of the uncertainty propagation. Assuming the quasi-normality and quasi-linearity of the studied function, this method provides approximate results. The results obtained following the methodology described in the GUM are then compared to the direct computation of the wall heat flux with altered temperatures.</p>
+                
+                <div style="text-align: center;">
+                    <figure>
+                        <img class="img-fluid img-profile mx-auto mb-2" src="assets/img/Tw_phiISO_direct_GUM_OK-1.png" width="80%" alt="GUM Error graphs" />
+                        <figcaption class="full-justify"><i>Errors in the wall flux depending on the bulk-to-wall temperature ratio and the error of the measurements of the wall temperatures in the case of symmetric heating conditions. The left graph shows the reference results, and the right graph exposes the estimation produced by the GUM. The lines indicate the isovalues of error 2%, 4%, 8%, 12%, 16%, 20%, 30%, 40%, 60%, 80%, and 100%. From <a href="https://univ-perp.hal.science/hal-03394514"> David <i>et al.</i> (2021)</a></i></figcaption>
+                    </figure>
+                </div>   
+                
+                <p class="full-justify">The figure shows that the wall heat flux is strongly impacted by the wall temperature error of measurement. An under-estimation of the wall temperature leads to slightly higher uncertainty on the wall heat flux than an overestimation. The model provides an accurate prediction of the error on the entire validity domain of the correlation.</p>
+            </div>
+        </div>                    
+
+    </div>
+</section>
             <!-- Supervision-->
             <hr class="m-0" />
             <section class="resume-section" id="Supervision-activities">
